@@ -1,0 +1,84 @@
+<form [formGroup]="formulario" (ngSubmit)="validacion()" novalidate>
+    <ul>
+        <li>
+            <h1>Formulario de contacto</h1>
+            <label for="nombre">
+                Nombre Completo
+            </label>
+            <input id="nombre" formControlName="nombre" type="text">
+            <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert-danger">
+                Campo requerido
+                    <div *ngIf="formulario.controls['nombre'].hasError('maxlength')">
+                        El máximo de caracteres es 40
+                    </div>
+            </div>
+        </li> 
+        <li>
+            <label for="telefono">
+                Teléfono
+            </label>
+            <input id="telefono" formControlName="telefono" type="number">
+            <div *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)" class="alert-danger">
+                Campo requerido, el número debe tener 9 dígitos
+                    <div *ngIf="formulario.controls['telefono'].hasError('maxlength')">
+                        El numero debe tener 9 dígitos
+                    </div>
+                    <div *ngIf="formulario.controls['telefono'].hasError('minlength')">
+                        El numero debe tener 9 dígitos
+                    </div>
+            </div>
+        </li>
+        <li>
+            <label for="correo">
+                Email
+            </label>
+            <input id="correo" formControlName="correo" type="email">
+            <div *ngIf="formulario.controls['correo'].invalid && (formulario.controls['correo'].dirty || formulario.controls['correo'].touched)" class="alert-danger">
+                Campo requerido
+                    <div *ngIf="formulario.controls['correo'].hasError('maxlength')">
+                        Ingresar correo electrónico
+                    </div>
+            </div>
+        </li>
+        <li>
+            <label for="dirigidoa">
+                Dirigido a:
+            </label>
+            <select formControlName="dirigidoa" name="Dirigido a ">
+                <br>
+                <option>Contenidos</option>
+                <option>Publicidad</option>
+                <option>Sugerencias</option>
+                <option>Suscripciones Digitales</option>
+            </select>
+            <div *ngIf="formulario.controls['dirigidoa'].invalid && (formulario.controls['dirigidoa'].dirty || formulario.controls['dirigidoa'].touched)" class="alert-danger">
+                Campo requerido
+                    <div *ngIf="formulario.controls['dirigidoa'].hasError('maxlength')">
+                        Campo Invalido
+                    </div>
+            </div>
+        </li> 
+        <li>
+            <label for="mensaje">
+                Mensaje
+            </label>
+            <textarea formControlName="mensaje" name="mensaje"></textarea>
+            <div *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert-danger">
+                Campo requerido
+                    <div *ngIf="formulario.controls['mensaje'].hasError('maxlength')">
+                        Campo Invalido
+                    </div>
+            </div>
+        </li>
+        <li>
+            <br/>
+            <button type="submit" [disabled]="!formulario.valid">Enviar</button>
+        </li>
+    </ul>
+    
+    <div *ngIf="activarMsg" id="recepcion">
+        Gracias, tus datos han sido recibidos!
+    </div>
+</form>
+
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Listaextras } from 'src/app/interfaces/noticiasextras';
 import {ListaNoticias} from '../../interfaces/noticias';
 
 @Component({
@@ -9,6 +10,7 @@ import {ListaNoticias} from '../../interfaces/noticias';
 export class InicioComponent implements OnInit {
 
   ListaNoticias=ListaNoticias;
+  Listaextras=Listaextras;
   constructor() { }
 
   ngOnInit(): void {

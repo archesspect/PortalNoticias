@@ -1,10 +1,10 @@
-export interface Categorias {
+export interface Categoriasextras {
     id:number;
     titulo:string;
     color: string;
 }
 
-export let ListaCategorias:Array<Categorias>=[
+export let ListaCategorias:Array<Categoriasextras>=[
     { id:1,
       titulo: "Entretenimiento",
       color: "Green"
@@ -30,5 +30,3 @@ export let ListaCategorias:Array<Categorias>=[
         color: "blue"
     }
 ]
-
-
