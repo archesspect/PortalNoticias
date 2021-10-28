@@ -5,11 +5,14 @@ import {DetalleNoticiaComponent} from './componentes/detalle-noticia/detalle-not
 import { InicioScreenComponent } from './screens/inicio-screen/inicio-screen.component';
 import { NoticiasScreenComponent } from './screens/noticias-screen/noticias-screen.component';
 import { ServicioclienteScreenComponent } from './screens/serviciocliente-screen/serviciocliente-screen.component';
+import { DetalleNoticiaExtraComponent } from './componentes/detalle-noticia-extra/detalle-noticia-extra.component';
 
 const routes: Routes = [
   {path:"",component:InicioComponent},
   {path:"detalleNoticia/:id",component:DetalleNoticiaComponent},
   {path:"detalleNoticia",component:DetalleNoticiaComponent},
+  {path:"detalleNoticiaExtra/:id",component:DetalleNoticiaExtraComponent},
+  {path:"detalleNoticiaExtra",component:DetalleNoticiaExtraComponent},
   {path:'', redirectTo: '/inicio', pathMatch:'full'},
   {path:'inicio', component: InicioComponent},
   {path:'noticias', component: NoticiasScreenComponent},

@@ -12,6 +12,7 @@ import { NoticiasScreenComponent } from './screens/noticias-screen/noticias-scre
 import { ServicioclienteScreenComponent } from './screens/serviciocliente-screen/serviciocliente-screen.component';
 import { FormularioComponent } from './formulario/formulario/formulario.component';
 import { FooterComponent } from './footer/footer/footer.component';
+import { DetalleNoticiaExtraComponent } from './componentes/detalle-noticia-extra/detalle-noticia-extra.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer/footer.component';
     NoticiasScreenComponent,
     ServicioclienteScreenComponent,
     FormularioComponent,
-    FooterComponent
+    FooterComponent,
+    DetalleNoticiaExtraComponent
   ],
   imports: [
     BrowserModule,

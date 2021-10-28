@@ -2,33 +2,37 @@
 <div class="header">
     <img src="../../../assets/portada2.jpg " width="1929" height="400" alt="">
 </div>
-
-
-    <div class="row">
-        <div class="col-md-2">
-            <ul>
-                <li *ngFor="let noticia of ListaNoticias">
+<!--destacadas-->
+        
+    <div class="container mt-5">
+        <div class="row g-0">
+            <div class="col-sm-6m col-md-4 px-3" *ngFor="let noticia of ListaNoticias">
+                <div class="card h-100">
                     <h2>{{noticia.titulo}}</h2>
                     <img src='../../../assets/{{noticia.imagen}}' alt='{{noticia.imagen}}'>
                     <p>{{noticia.texto}}</p>
-                    <button [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" >Ver más</button>
-                </li>  
-            </ul>
+                    <button type="button" class="btn btn-primary" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" >Leer Más</button>
+
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            <ul>
-                <li *ngFor="let extra of Listaextras">
-                    <h2>{{extra.titulo}}</h2>
-                    <img src='../../../assets/{{extra.imagen}}' alt='{{extra.imagen}}'>
-                    <p>{{extra.texto}}</p>
-                    <button [routerLink]="['/detalleNoticia',extra.id]" routerLinkActive="router-link-active" >Ver más</button>
-                </li>  
-            </ul>
+        
+    <!--extras-->
+      
+        <div class="container mt-5">
+            <div class="row g-0">
+                <div class="col-sm-6m col-md-3 px-3" id="estilonoticia"*ngFor="let extra of Listaextras"> 
+                    <div class="card h-100">
+                        <h2>{{extra.titulo}}</h2>
+                        <img src='../../../assets/{{extra.imagen}}' alt='{{extra.imagen}}'>
+                        <p>{{extra.texto}}</p>
+                        <button [routerLink]="['/detalleNoticiaExtra',extra.id]" routerLinkActive="router-link-active" >Leer Más</button>
+                    </div>
+                </div>  
+            </div>  
         </div>
-    </div>
-
+    
+       
 <app-footer></app-footer>
     

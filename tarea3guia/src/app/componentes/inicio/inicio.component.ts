@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Listaextras } from 'src/app/interfaces/noticiasextras';
 import {ListaNoticias} from '../../interfaces/noticias';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
