@@ -1,9 +1,9 @@
-# Tarea 3:Descripción del problema:
+# Tarea 3:Instrucciones de compilación:
 
 # Compilación
 - npm install : para instalar las dependencias del package.json, el cual permitirá crear el directorio node_modules.
 
-#Posición de compilación
+# Posición de compilación
 - cd tarea3guia : para posicionarse en la carpeta y usar angular para compilar el proyecto.
 
 # Montar Proyecto
