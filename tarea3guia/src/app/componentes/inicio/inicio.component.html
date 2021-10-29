@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
+
 <div class="header">
     <img src="../../../assets/portada2.jpg " width="1929" height="400" alt="">
 </div>
@@ -8,10 +9,10 @@
         <div class="row g-0">
             <div class="col-sm-6m col-md-4 px-3" *ngFor="let noticia of ListaNoticias">
                 <div class="card h-100">
-                    <h2>{{noticia.titulo}}</h2>
+                    <h2> {{noticia.titulo}}</h2>
                     <img src='../../../assets/{{noticia.imagen}}' alt='{{noticia.imagen}}'>
                     <p>{{noticia.texto}}</p>
-                    <button type="button" class="btn btn-primary" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" >Leer Más</button>
+                    <button type="button" class="" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" >Leer Más</button>
 
                 </div>
             </div>
@@ -35,4 +36,3 @@
     
        
 <app-footer></app-footer>
-    

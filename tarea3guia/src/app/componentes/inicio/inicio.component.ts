@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Listaextras } from 'src/app/interfaces/noticiasextras';
-import {ListaNoticias} from '../../interfaces/noticias';
-import { RouterLink } from '@angular/router';
+import { ListaNoticias } from '../../interfaces/noticias';
+import { ActivatedRoute } from '@angular/router';
+import {Categorias,ListaCategorias} from '../../interfaces/categorias';
 
 @Component({
   selector: 'app-inicio',
@@ -10,9 +11,12 @@ import { RouterLink } from '@angular/router';
 })
 export class InicioComponent implements OnInit {
 
-  ListaNoticias=ListaNoticias;
-  Listaextras=Listaextras;
-  constructor() { }
+
+  public ListaNoticias=ListaNoticias;
+  public Listaextras=Listaextras;
+  
+  constructor() { 
+ }
 
   ngOnInit(): void {
   }

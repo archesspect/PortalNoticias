@@ -7,7 +7,7 @@ export interface Categorias {
 export let ListaCategorias:Array<Categorias>=[
     { id:1,
       titulo: "Entretenimiento",
-      color: "Green"
+      color: "green"
     },
     { id:2,
         titulo: "Tecnología",
@@ -15,15 +15,15 @@ export let ListaCategorias:Array<Categorias>=[
     },
     { id:3,
         titulo: "Deportes",
-        color: "DARK-RED"
+        color: "darkred"
     },
     { id:4,
         titulo: "Economía",
-        color: "PURPLE"
+        color: "violet"
     },
     { id:5,
         titulo: "Salud",
-        color: "DARKBLUE"
+        color: "darkblue"
     },
     { id:6,
         titulo: "Mundo",

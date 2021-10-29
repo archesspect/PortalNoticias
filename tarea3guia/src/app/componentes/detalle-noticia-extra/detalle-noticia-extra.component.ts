@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Listaextras,Extras} from '../../interfaces/noticiasextras';
 import {ActivatedRoute,Route} from '@angular/router';
 import {Categoriasextras,ListaCategorias} from '../../interfaces/categoriasextras';
+import { Categorias } from 'src/app/interfaces/categorias';
 
 @Component({
   selector: 'app-detalle-noticia-extra',

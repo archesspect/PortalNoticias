@@ -11,7 +11,7 @@ export class DetalleNoticiaComponent implements OnInit {
   ListaNoticias=ListaNoticias;
   id:number=0;
   Noticia:any;
-  Categoria:any;
+  Categorias:any;
 
   constructor(private ruta:ActivatedRoute) { 
      this.ruta.params.subscribe(datos=>{
@@ -23,9 +23,9 @@ export class DetalleNoticiaComponent implements OnInit {
   ngOnInit(): void {
      
      this.Noticia=ListaNoticias.find(objeto=>objeto.id==this.id);
-     this.Categoria=ListaCategorias.find(objeto=>objeto.id==this.Noticia.idCategoria);
+     this.Categorias=ListaCategorias.find(objeto=>objeto.id==this.Noticia.idCategoria);
 
-     console.log(this.Categoria);
+     console.log(this.Categorias);
      
   }
 

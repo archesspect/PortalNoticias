@@ -1,4 +1,4 @@
-<h2>{{Noticia.titulo}} | <span  [ngClass]="{verde: Categoria.color=='Green',rojo: Categoria.color=='red',rojooscuro: Categoria.color=='Dark-RED',violeta: Categoria.color=='PURPLE',azuloscuro: Categoria.color=='DARK-BLUE',azul: Categoria.color=='blue'}">{{Categoria.titulo}}</span></h2>
+<h2>{{Noticia.titulo}} | <span  [ngClass]="{verde: Categorias.color=='green',rojo: Categorias.color=='red',rojooscuro: Categorias.color=='darkred',violeta: Categorias.color=='violet',azuloscuro: Categorias.color=='darkblue',azul: Categorias.color=='blue'}">{{Categorias.titulo}}</span></h2>
 <img src='../../../assets/{{Noticia.imagen}}' alt='{{Noticia.imagen}}'>
 <hr>Autor: {{Noticia.autor}} || Fecha:{{Noticia.fecha}}
 <p>{{Noticia.todotexto}}</p>

@@ -2,7 +2,7 @@
     <ul>
         <li>
             <h1>Formulario de contacto</h1>
-            <label for="nombre">
+            <label for="nombre" id="cabezanombre">
                 Nombre Completo
             </label>
             <input id="nombre" formControlName="nombre" type="text">
@@ -14,7 +14,7 @@
             </div>
         </li> 
         <li>
-            <label for="telefono">
+            <label for="telefono" id="cabezatelefono">
                 Teléfono
             </label>
             <input id="telefono" formControlName="telefono" type="number">
@@ -29,7 +29,7 @@
             </div>
         </li>
         <li>
-            <label for="correo">
+            <label for="correo" id="cabezacorreo">
                 Email
             </label>
             <input id="correo" formControlName="correo" type="email">
@@ -41,10 +41,10 @@
             </div>
         </li>
         <li>
-            <label for="dirigidoa">
+            <label for="dirigidoa" id="cabezadirigidoa">
                 Dirigido a:
             </label>
-            <select formControlName="dirigidoa" name="Dirigido a ">
+            <select formControlName="dirigidoa" id="dirigidoa" name="Dirigido a ">
                 <br>
                 <option>Contenidos</option>
                 <option>Publicidad</option>
@@ -59,10 +59,10 @@
             </div>
         </li> 
         <li>
-            <label for="mensaje">
+            <label for="mensaje" id="cabezamensaje">
                 Mensaje
             </label>
-            <textarea formControlName="mensaje" name="mensaje"></textarea>
+            <textarea formControlName="mensaje" id="mensaje" name="mensaje"></textarea>
             <div *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert-danger">
                 Campo requerido
                     <div *ngIf="formulario.controls['mensaje'].hasError('maxlength')">
@@ -72,7 +72,7 @@
         </li>
         <li>
             <br/>
-            <button type="submit" [disabled]="!formulario.valid">Enviar</button>
+            <button type="submit" id="botonenvio" onclick=borrardatos() [disabled]="!formulario.valid">Enviar</button>
         </li>
     </ul>
     
